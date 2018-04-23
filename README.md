@@ -12,6 +12,9 @@ does not seem to be displayed correctly.
 
 The output is a visual index of Archivematica: [Archivematica Sitemap Reference](sitemap-reference.md)
 
+If GitHub doesn't render this correctly, you can see a [HTM preview](https://htmlpreview.github.io/?https://raw.githubusercontent.com/httpreserve/capture/master/sitemap-preview.htm) of it which has restricted functionality, but might still
+be a good reference.
+
 ## Format
 
 Currently the script outputs [Markdown](http://fileformats.archiveteam.org/wiki/Markdown)
@@ -21,8 +24,8 @@ wrapping required for markdown is small and so it can be untangled again in futu
 pretty easily. We might for example want to output JSON containing the embedded
 images to be parsed into a more generic encoder for this type of sitemap data.
 
-Because the current format is Markdown, specific sections can be bookmarked when
-viewed in, for example, GitHub. See this [Validation Script](sitemap-reference.md#fpr-policy-tool-command).
+Because the current format is markdown; specific sections can be bookmarked when
+viewed in a markdown viewer. See this [Validation Script](sitemap-reference.md#fpr-policy-tool-command) as a good example.
 
 ## HTTPreserve
 
