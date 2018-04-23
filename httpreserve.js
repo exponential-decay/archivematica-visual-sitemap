@@ -28,12 +28,13 @@ page.open("http://127.0.0.1:62080", function(status) {
     window.setTimeout(function() {
 	   page.viewportSize = { width: 1366, height: 768 };
 	   page.clipRect = { left: 0, top: 0, width: 1366, height: 768 };
+	   // once logged in, access the user requested web page
 	   page.open(address);
 	   window.setTimeout(function() {
 	   		console.log('Status: ' + status);
-      		page.render(output, {format: 'PNG', quality: '75'});
+      		page.render(output, {format: 'jpeg', quality: '75'});
        		phantom.exit();
-       }, 5000);
+       }, 30000);
     }, 5000);
   }
 });

@@ -16,7 +16,7 @@ const aipIDTemplate = "{aip_uuid}"
 
 // Dimensions for screenshot output.
 const dimensionX = 768
-const dimentsionY = 430
+const dimensionY = 430
 
 // AMUrls is a descriptive structure for Archivematica URLs.
 type AMUrls struct {
@@ -38,13 +38,14 @@ type Tab struct {
 
 // AMSiteMap is a descriptive strucutre for the Archivematica Sitemap.
 type AMSiteMap struct {
-	Title        string
-	Version      string
-	Description  string
-	BaseURL      string
-	TransferUUID string
-	AipUUID      string
-	Tabs         []Tab
+	Title                string
+	Version              string
+	Description          string
+	BaseURL              string
+	TransferUUID         string
+	AipUUID              string
+	MicroserviceExamples []map[string]string
+	Tabs                 []Tab
 }
 
 // SiteMap is a generic wrapper for the Archivematica Sitemap Type.
@@ -52,15 +53,37 @@ type SiteMap struct {
 	ArchivematicaSitemap AMSiteMap
 }
 
+// replaceMicroservices is an even more blunt object that loops through each
+// of the microservice template fields and tries to replace them, even if we
+// have already completed that before. Consider using a flag, and alternative
+// checking mechanisms in future versions.
+func replaceMicroservices(captureURL string,
+	microserviceExamples []map[string]string) string {
+	for index := range microserviceExamples {
+		for key, value := range microserviceExamples[index] {
+			if strings.Contains(captureURL, key) {
+				return strings.Replace(captureURL, key, value, 1)
+			}
+			break
+		}
+	}
+	return captureURL
+}
+
+// templateReplace is a pretty blunt object that tries to replace all the
+// strings whether there is a template field in one or not. Consider creating
+// a different kind of mapping in future versions.
 func templateReplace(templateURL string, baseURL string,
-	transferUUID string, aipUUID string) string {
+	transferUUID string, aipUUID string,
+	microserviceExamples []map[string]string) string {
 	captureURL := strings.Replace(templateURL, baseURLTemplate, baseURL, 1)
 	captureURL = strings.Replace(captureURL, transferIDTemplate, transferUUID, 1)
-	return strings.Replace(captureURL, aipIDTemplate, aipUUID, 1)
+	captureURL = strings.Replace(captureURL, aipIDTemplate, aipUUID, 1)
+	return replaceMicroservices(captureURL, microserviceExamples)
 }
 
 func outputNewline() {
-	fmt.Println("\n")
+	fmt.Println("\n\n")
 }
 
 func outputMarkdownHeader(title string, version string,
@@ -129,6 +152,7 @@ func main() {
 	description := js.ArchivematicaSitemap.Description
 	transferUUID := js.ArchivematicaSitemap.TransferUUID
 	aipUUID := js.ArchivematicaSitemap.AipUUID
+	microserviceExamples := js.ArchivematicaSitemap.MicroserviceExamples
 
 	log.Println(title, version, baseURL, transferUUID, aipUUID)
 
@@ -144,9 +168,8 @@ func main() {
 		outputDashboardTabHeader(tab.DashboardTab.Title,
 			tab.DashboardTab.Description)
 		for _, url := range tab.DashboardTab.Urls {
-			//log.Println(url.Title)
 			captureURL := templateReplace(url.URL, baseURL, transferUUID,
-				aipUUID)
+				aipUUID, microserviceExamples)
 			outputSubTabHeader(url.Title)
 			fmt.Println(capture(captureURL, url.Title, false))
 		}

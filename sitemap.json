@@ -1,163 +1,394 @@
 {
 	"archivematicaSiteMap": {
-		"title": "Archivematica Sitemap",
+		"title": "Archivematica Sitemap Reference",
 		"description": "An auto-generated visual index for the Archivematica digital preservation system.",
 		"version": "1.7",
 		"baseURL": "http://127.0.0.1:62080",
-		"transferUUID": "db08746b-85bf-4747-9ac9-762235af44d5",
-		"aipUUID": "f95ea36c-76f1-4b6b-a075-19248f075119",
-		"tabs":
-			[{
-					"dashboardTab": {
+		"transferUUID": "403fdf3d-3b57-47c7-bda8-97fd03539cd2",
+		"aipUUID": "dd63166f-fb11-465e-857e-2f1347940e18",
+		"microserviceExamples": [
+			{"{ms_0}": "afe2c331-8fdb-4e34-8e85-7060688be822"},
+			{"{ms_1}": "eaf4449b-18a7-4706-9c5a-942a3859fbab"},
+			{"{ms_2}": "2c84e83e-3fca-45a3-8aad-ff35495bc06c"}
+		],
+		"tabs": [{
+				"dashboardTab": {
 					"title": "Transfer Tab",
 					"description": "The transfer tab lets users manage the process of creating a SIP in Archivematica.",
-					"urls": [
-						{"title": "Transfer Main", "url": "{base_url}/transfer/"},
-						{"title": "Transfer Summary", "url": "{base_url}/transfer/{transfer_uuid}/"},
-						{"title": "Transfer Microservices", "url": "{base_url}/transfer/{transfer_uuid}/microservices/"},
-						{"title": "Transfer Rights", "url": "{base_url}/transfer/{transfer_uuid}/rights/"},
-						{"title": "Transfer Add Rights", "url": "{base_url}/transfer/{transfer_uuid}/rights/add/"},
-						{"title": "Transfer Metadata", "url": "{base_url}/transfer/{transfer_uuid}/metadata/"},
-						{"title": "Transfer Add Metadata", "url": "{base_url}/transfer/{transfer_uuid}/metadata/add/"}
-					]
-				}
-			},
-			{
-					"dashboardTab": {
-					"title": "Microservices",
-					"description": "Microservices happen during Transfer and Ingest in Archivematica and describe a discrete process happening on your files, e.g. calculating checksum or generating access copies of your content.",
-					"urls": [
-						{"title": "Scan for viruses", "url": "{base_url}/tasks/878eff28-9854-49cb-84d3-b4dfa017b161/"},
-						{"title": "Verify Metadata Directory Checksum", "url": "{base_url}/tasks/028f5dd9-e574-4618-8521-a7b099c37473/"}
-					]
-				}
-			},
-			{
-					"dashboardTab": {
-					"title": "Backlog Tab",
-					"description": "The backlog tab is where you can view the SIPs you have generated during transfer but have not yet created an AIP from.",
-					"urls": [
-						{"title": "Backlog Main", "url": "{base_url}/backlog/"}
-					]
-				}
-			},
-			{
-					"dashboardTab": {
-					"title": "Transfer Tab",
-					"description": "The appraisal tab gives you deeper insight into the content in your sips and allow you to examine or arrange contents before ingest.",
-					"urls": [
-						{"title": "Appraisal Main", "url": "{base_url}/appraisal/"}
-					]
-				}
-			},
-			{
-					"dashboardTab": {
-					"title": "Ingest Tab",
-					"description": "Ingest is the process of turning a SIP into an AIP and then storing it somewhere via your Archivematica Storage Service.",
-					"urls": [
-						{"title": "Ingest Main", "url": "{base_url}/ingest/"},
-						{"title": "Ingest Summary", "url": "{base_url}/ingest/{aip_uuid}/"},
-						{"title": "Ingest Microservices", "url": "{base_url}/ingest/{aip_uuid}/microservices/"},
-						{"title": "Ingest Rights", "url": "{base_url}/ingest/{aip_uuid}/rights/"},
-						{"title": "Ingest Add Rights", "url": "{base_url}/ingest/{aip_uuid}/rights/add/"},
-						{"title": "Ingest Metadata", "url": "{base_url}/ingest/{aip_uuid}/metadata/"},
-						{"title": "Ingest Add Metadata", "url": "{base_url}/ingest/{aip_uuid}/metadata/add/"},
-						{"title": "Ingest Metadata Event Detail", "url": "{base_url}/ingest/{aip_uuid}/metadata/event_detail/"},
-						{"title": "Ingest Add Metadata Files", "url": "{base_url}/ingest/{aip_uuid}/metadata/add_files/"},
-						{"title": "Ingest AIP Preview", "url": "{base_url}/ingest/preview/aip/{aip_uuid}/"}
-					]
-				}
-			},
-			{
-					"dashboardTab": {
-					"title": "Archival Storage Tab",
-					"description": "Archival storage provides an index from which we can find AIPs and kick-off various post-ingest processes surrounding those.",
-					"urls": [
-						{"title": "Archival Storage Main", "url": "{base_url}/archival-storage/?order_by=created&sort_by=down"},
-						{"title": "AIP View", "url": "{base_url}/archival-storage/{aip_uuid}/"},
-						{"title": "Create AIC", "url": "{base_url}/ingest/aic/4211b286-6266-40ac-a2ec-fc393d13810a/metadata/add/"}
+					"urls": [{
+							"title": "Transfer Main",
+							"url": "{base_url}/transfer/"
+						},
+						{
+							"title": "Transfer Summary",
+							"url": "{base_url}/transfer/{transfer_uuid}/"
+						},
+						{
+							"title": "Transfer Microservices",
+							"url": "{base_url}/transfer/{transfer_uuid}/microservices/"
+						},
+						{
+							"title": "Transfer Rights",
+							"url": "{base_url}/transfer/{transfer_uuid}/rights/"
+						},
+						{
+							"title": "Transfer Add Rights",
+							"url": "{base_url}/transfer/{transfer_uuid}/rights/add/"
+						},
+						{
+							"title": "Transfer Metadata",
+							"url": "{base_url}/transfer/{transfer_uuid}/metadata/"
+						},
+						{
+							"title": "Transfer Add Metadata",
+							"url": "{base_url}/transfer/{transfer_uuid}/metadata/add/"
+						}
 					]
 				}
 			},
 			{
 				"dashboardTab": {
-				"title": "Preservation Planning Tab",
-				"description": "AKA the format policy register. The Preservation planning tab gives Archivematica superpowers! You can configure normalization, validation, and more to do with your file formats here.",
-				"urls": [
-						{"title": "FPR Formats", "url": "{base_url}/fpr/format/"},
-						{"title": "FPR Format Groups", "url": "{base_url}/fpr/formatgroup/"},
-						{"title": "FPR ID Tools", "url": "{base_url}/fpr/idtool/"},
-						{"title": "FPR ID Rules", "url": "{base_url}/fpr/idrule/"},
-						{"title": "FPR ID Commands", "url": "{base_url}/fpr/idcommand/"},
-						{"title": "FPR Tools", "url": "{base_url}/fpr/fptool/"},
-						{"title": "FPR Characterization Rules", "url": "{base_url}/fpr/fprule/characterization/"},
-						{"title": "FPR Characterization Tools", "url": "{base_url}/fpr/fpcommand/characterization/"},
-						{"title": "FPR Event Rules", "url": "{base_url}/fpr/fprule/event_detail/"},
-						{"title": "FPR Event Details", "url": "{base_url}/fpr/fpcommand/event_detail/"},
-						{"title": "FPR Extraction Rules", "url": "{base_url}/fpr/fprule/extraction/"},
-						{"title": "FPR Extraction Commands", "url": "{base_url}/fpr/fpcommand/extraction/"},
-						{"title": "FPR Normalization Rules", "url": "{base_url}/fpr/fprule/normalization/"},
-						{"title": "FPR Normalization Commands", "url": "{base_url}/fpr/fpcommand/normalization/"},
-						{"title": "FPR Transcription Rules", "url": "{base_url}/fpr/fprule/transcription/"},
-						{"title": "FPR Transcription Commands", "url": "{base_url}/fpr/fpcommand/transcription/"},
-						{"title": "FPR validation Rules", "url": "{base_url}/fpr/fprule/validation/"},
-						{"title": "FPR Validation Commands", "url": "{base_url}/fpr/fpcommand/validation/"},
-						{"title": "FPR Verification Rules", "url": "{base_url}/fpr/fprule/verification/"},
-						{"title": "FPR Verification Commands", "url": "{base_url}/fpr/fpcommand/verification/"}
+					"title": "Microservices",
+					"description": "Microservices happen during Transfer and Ingest in Archivematica and describe a discrete process happening on your files, e.g. calculating checksum or generating access copies of your content. Some microservice examples are below.",
+					"urls": [{
+							"title": "Scan for viruses",
+							"url": "{base_url}/tasks/{ms_0}/"
+						},
+						{
+							"title": "Identify file format",
+							"url": "{base_url}/tasks/{ms_1}/"
+						},
+						{
+							"title": "Store the AIP",
+							"url": "{base_url}/tasks/{ms_2}/"
+						}
 					]
 				}
 			},
 			{
-					"dashboardTab": {
+				"dashboardTab": {
+					"title": "Backlog Tab",
+					"description": "The backlog tab is where you can view the SIPs you have generated during transfer but have not yet created an AIP from.",
+					"urls": [{
+						"title": "Backlog Main",
+						"url": "{base_url}/backlog/"
+					}]
+				}
+			},
+			{
+				"dashboardTab": {
+					"title": "Transfer Tab",
+					"description": "The appraisal tab gives you deeper insight into the content in your sips and allow you to examine or arrange contents before ingest.",
+					"urls": [{
+						"title": "Appraisal Main",
+						"url": "{base_url}/appraisal/"
+					}]
+				}
+			},
+			{
+				"dashboardTab": {
+					"title": "Ingest Tab",
+					"description": "Ingest is the process of turning a SIP into an AIP and then storing it somewhere via your Archivematica Storage Service.",
+					"urls": [{
+							"title": "Ingest Main",
+							"url": "{base_url}/ingest/"
+						},
+						{
+							"title": "Ingest Summary",
+							"url": "{base_url}/ingest/{aip_uuid}/"
+						},
+						{
+							"title": "Ingest Microservices",
+							"url": "{base_url}/ingest/{aip_uuid}/microservices/"
+						},
+						{
+							"title": "Ingest Rights",
+							"url": "{base_url}/ingest/{aip_uuid}/rights/"
+						},
+						{
+							"title": "Ingest Add Rights",
+							"url": "{base_url}/ingest/{aip_uuid}/rights/add/"
+						},
+						{
+							"title": "Ingest Metadata",
+							"url": "{base_url}/ingest/{aip_uuid}/metadata/"
+						},
+						{
+							"title": "Ingest Add Metadata",
+							"url": "{base_url}/ingest/{aip_uuid}/metadata/add/"
+						},
+						{
+							"title": "Ingest Metadata Event Detail",
+							"url": "{base_url}/ingest/{aip_uuid}/metadata/event_detail/"
+						},
+						{
+							"title": "Ingest Add Metadata Files",
+							"url": "{base_url}/ingest/{aip_uuid}/metadata/add_files/"
+						},
+						{
+							"title": "Ingest AIP Preview",
+							"url": "{base_url}/ingest/preview/aip/{aip_uuid}/"
+						}
+					]
+				}
+			},
+			{
+				"dashboardTab": {
+					"title": "Archival Storage Tab",
+					"description": "Archival storage provides an index from which we can find AIPs and kick-off various post-ingest processes surrounding those.",
+					"urls": [{
+							"title": "Archival Storage Main",
+							"url": "{base_url}/archival-storage/?order_by=created&sort_by=down"
+						},
+						{
+							"title": "AIP View",
+							"url": "{base_url}/archival-storage/{aip_uuid}/"
+						},
+						{
+							"title": "Create AIC",
+							"url": "{base_url}/ingest/aic/4211b286-6266-40ac-a2ec-fc393d13810a/metadata/add/"
+						}
+					]
+				}
+			},
+			{
+				"dashboardTab": {
+					"title": "Preservation Planning Tab",
+					"description": "AKA the format policy register. The Preservation planning tab gives Archivematica superpowers! You can configure normalization, validation, and more to do with your file formats here.",
+					"urls": [{
+							"title": "FPR Formats",
+							"url": "{base_url}/fpr/format/"
+						},
+						{
+							"title": "Format Versions",
+							"url": "{base_url}/fpr/format/matroska/"
+						},
+						{
+							"title": "Format Detail",
+							"url": "{base_url}/fpr/format/matroska/generic-mkv/"
+						},
+						{
+							"title": "FPR Format Groups",
+							"url": "{base_url}/fpr/formatgroup/"
+						},
+						{
+							"title": "FPR ID Tools",
+							"url": "{base_url}/fpr/idtool/"
+						},
+						{
+							"title": "FPR ID Tool Versions",
+							"url": "{base_url}/fpr/idtool/siegfried-176/"
+						},
+						{
+							"title": "FPR ID Tool Detail",
+							"url": "{base_url}/fpr/idcommand/df074736-e2f7-4102-b25d-569c099d410c/"
+						},
+						{
+							"title": "FPR ID Rules",
+							"url": "{base_url}/fpr/idrule/"
+						},
+						{
+							"title": "FPR ID Commands",
+							"url": "{base_url}/fpr/idcommand/"
+						},
+						{
+							"title": "FPR Policy Tools",
+							"url": "{base_url}/fpr/fptool/"
+						},
+						{
+							"title": "FPR Policy Tool Detail",
+							"url": "{base_url}/fpr/fptool/mediaconch-1803/"
+						},
+						{
+							"title": "FPR Policy Tool Command",
+							"url": "{base_url}/fpr/fpcommand/287656fb-e58f-4967-bf72-0bae3bbb5ca8/"
+						},
+						{
+							"title": "FPR Characterization Rules",
+							"url": "{base_url}/fpr/fprule/characterization/"
+						},
+						{
+							"title": "FPR Characterization Tools",
+							"url": "{base_url}/fpr/fpcommand/characterization/"
+						},
+						{
+							"title": "FPR Event Rules",
+							"url": "{base_url}/fpr/fprule/event_detail/"
+						},
+						{
+							"title": "FPR Event Details",
+							"url": "{base_url}/fpr/fpcommand/event_detail/"
+						},
+						{
+							"title": "FPR Extraction Rules",
+							"url": "{base_url}/fpr/fprule/extraction/"
+						},
+						{
+							"title": "FPR Extraction Commands",
+							"url": "{base_url}/fpr/fpcommand/extraction/"
+						},
+						{
+							"title": "FPR Normalization Rules",
+							"url": "{base_url}/fpr/fprule/normalization/"
+						},
+						{
+							"title": "FPR Normalization Commands",
+							"url": "{base_url}/fpr/fpcommand/normalization/"
+						},
+						{
+							"title": "FPR Transcription Rules",
+							"url": "{base_url}/fpr/fprule/transcription/"
+						},
+						{
+							"title": "FPR Transcription Commands",
+							"url": "{base_url}/fpr/fpcommand/transcription/"
+						},
+						{
+							"title": "FPR validation Rules",
+							"url": "{base_url}/fpr/fprule/validation/"
+						},
+						{
+							"title": "FPR Validation Rule Example",
+							"url": "{base_url}/fpr/fprule/4324a41f-6016-4b28-a0b0-c343dbaca42e/"
+						},
+						{
+							"title": "FPR Validation Commands",
+							"url": "{base_url}/fpr/fpcommand/validation/"
+						},
+						{
+							"title": "FPR Validation Command Example",
+							"url": "{base_url}/fpr/fpcommand/fe9e3046-29fb-4cc6-b71c-db50b0aac127/"
+						},
+						{
+							"title": "FPR Verification Rules",
+							"url": "{base_url}/fpr/fprule/verification/"
+						},
+						{
+							"title": "FPR Verification Commands",
+							"url": "{base_url}/fpr/fpcommand/verification/"
+						},
+						{
+							"title": "FPR Verification Command Example",
+							"url": "{base_url}/fpr/fpcommand/ef3ea000-0c3c-4cae-adc2-aa2a6ccbffce/"
+						}
+					]
+				}
+			},
+			{
+				"dashboardTab": {
 					"title": "Access Tab",
 					"description": "The access tab shows the DIPs we have created in the system.",
-					"urls": [
-						{"title": "Access Main", "url": "{base_url}/access/"}
-					]
+					"urls": [{
+						"title": "Access Main",
+						"url": "{base_url}/access/"
+					}]
 				}
 			},
 			{
-					"dashboardTab": {
+				"dashboardTab": {
 					"title": "Administration Tab",
 					"description": "Configure various other components of Archivematica here.",
-					"urls": [
-						{"title": "Processing Config", "url": "{base_url}/administration/processing/"},
-						{"title": "Edit Processing Config", "url": "{base_url}/administration/processing/edit/default/"},
-						{"title": "General", "url": "{base_url}/administration/general/"},
-						{"title": "Failure Reports", "url": "{base_url}/administration/reports/failures/"},
-						{"title": "Transfer Source Locations", "url": "{base_url}/administration/sources/"},
-						{"title": "AIP Storage Locations", "url": "{base_url}/administration/storage/"},
-						{"title": "Processing Storage Usage", "url": "{base_url}/administration/usage/"},
-						{"title": "AtoM DIP Config", "url": "{base_url}/administration/dips/atom/"},
-						{"title": "Edit Levels of Preservation", "url": "{base_url}/administration/dips/atom/edit_levels/"},
-						{"title": "ArchivesSpace DIP Config", "url": "{base_url}/administration/dips/as/"},
-						{"title": "Archivist's Toolkit DIP Config", "url": "{base_url}/administration/dips/atk/"},
-						{"title": "PREMIS Agent Config", "url": "{base_url}/administration/premis/agent/"},
-						{"title": "REST API Configuration", "url": "{base_url}/administration/api/"},
-						{"title": "User Accounts Listing", "url": "{base_url}/administration/accounts/list/"},
-						{"title": "Edit User Account", "url": "{base_url}/administration/accounts/1/edit/"},
-						{"title": "Handle Configuration for Persistent Identifier (PID) Binding", "url": "{base_url}/administration/handle/"},
-						{"title": "Language Configuration", "url": "{base_url}/administration/language/"},
-						{"title": "Version Information", "url": "{base_url}/administration/version/"}
+					"urls": [{
+							"title": "Processing Config",
+							"url": "{base_url}/administration/processing/"
+						},
+						{
+							"title": "Edit Processing Config",
+							"url": "{base_url}/administration/processing/edit/default/"
+						},
+						{
+							"title": "General",
+							"url": "{base_url}/administration/general/"
+						},
+						{
+							"title": "Failure Reports",
+							"url": "{base_url}/administration/reports/failures/"
+						},
+						{
+							"title": "Transfer Source Locations",
+							"url": "{base_url}/administration/sources/"
+						},
+						{
+							"title": "AIP Storage Locations",
+							"url": "{base_url}/administration/storage/"
+						},
+						{
+							"title": "Processing Storage Usage",
+							"url": "{base_url}/administration/usage/"
+						},
+						{
+							"title": "AtoM DIP Config",
+							"url": "{base_url}/administration/dips/atom/"
+						},
+						{
+							"title": "Edit Levels of Preservation",
+							"url": "{base_url}/administration/dips/atom/edit_levels/"
+						},
+						{
+							"title": "ArchivesSpace DIP Config",
+							"url": "{base_url}/administration/dips/as/"
+						},
+						{
+							"title": "Archivist's Toolkit DIP Config",
+							"url": "{base_url}/administration/dips/atk/"
+						},
+						{
+							"title": "PREMIS Agent Config",
+							"url": "{base_url}/administration/premis/agent/"
+						},
+						{
+							"title": "REST API Configuration",
+							"url": "{base_url}/administration/api/"
+						},
+						{
+							"title": "User Accounts Listing",
+							"url": "{base_url}/administration/accounts/list/"
+						},
+						{
+							"title": "Edit User Account",
+							"url": "{base_url}/administration/accounts/1/edit/"
+						},
+						{
+							"title": "Handle Configuration for Persistent Identifier (PID) Binding",
+							"url": "{base_url}/administration/handle/"
+						},
+						{
+							"title": "Language Configuration",
+							"url": "{base_url}/administration/language/"
+						},
+						{
+							"title": "Version Information",
+							"url": "{base_url}/administration/version/"
+						}
 					]
 				}
 			},
 			{
-					"dashboardTab": {
+				"dashboardTab": {
 					"title": "Current User Tab",
 					"description": "0x024601 Who am I?",
-					"urls": [
-						{"title": "Current User Profile", "url": "{base_url}/administration/accounts/profile/"}
-					]
+					"urls": [{
+						"title": "Current User Profile",
+						"url": "{base_url}/administration/accounts/profile/"
+					}]
 				}
 			},
 			{
-					"dashboardTab": {
+				"dashboardTab": {
 					"title": "Error Pages",
 					"description": "If something doesn't work in Archivematica you might see one of these pages.",
-					"urls": [
-						{"title": "404 Page Not Found", "url": "{base_url}/404"},
-						{"title": "Page Forbidden", "url": "{base_url}/forbidden/"}
+					"urls": [{
+							"title": "404 Page Not Found",
+							"url": "{base_url}/404"
+						},
+						{
+							"title": "Page Forbidden",
+							"url": "{base_url}/forbidden/"
+						},
+						{
+							"title": "Does not exist",
+							"url": "{base_url}/tasks/0b8fa534-d298-48ca-94cb-5640746c8652/"
+						}
 					]
 				}
 			}
