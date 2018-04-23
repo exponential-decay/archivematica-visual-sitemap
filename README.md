@@ -12,8 +12,8 @@ does not seem to be displayed correctly.
 
 The output is a visual index of Archivematica: [Archivematica Sitemap Reference](sitemap-reference.md)
 
-If GitHub doesn't render this correctly, you can see a [HTM preview](https://htmlpreview.github.io/?https://raw.githubusercontent.com/httpreserve/capture/master/sitemap-preview.htm) of it which has restricted functionality, but might still
-be a good reference.
+If GitHub doesn't render this correctly, you can see a [HTM preview](https://htmlpreview.github.io/?https://raw.githubusercontent.com/exponential-decay/archivematica-visual-sitemap/master/sitemap-preview.htm) of it which has
+restricted functionality, but might still be a good reference.
 
 ## Format
 
