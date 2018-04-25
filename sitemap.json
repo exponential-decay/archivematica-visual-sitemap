@@ -22,6 +22,10 @@
 							"url": "{base_url}/transfer/"
 						},
 						{
+							"title": "Disk Image Metadata Input (Optional for disk image transfer)",
+							"url": "{base_url}/transfer/component/baadf00d-964e-4107-bca6-329737c3a230/"
+						},
+						{
 							"title": "Transfer Summary",
 							"url": "{base_url}/transfer/{transfer_uuid}/"
 						},
