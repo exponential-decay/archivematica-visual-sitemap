@@ -4,13 +4,15 @@
 		"description": "An auto-generated visual index for the Archivematica digital preservation system.",
 		"version": "1.7",
 		"baseURL": "http://127.0.0.1:62080",
-		"transferUUID": "403fdf3d-3b57-47c7-bda8-97fd03539cd2",
-		"aipUUID": "dd63166f-fb11-465e-857e-2f1347940e18",
+		"transferUUID": "37f5ca9c-fb6f-4d1d-8d40-f0ecde93334b",
+		"aipUUID": "7341b1a4-d6c2-4fc3-830d-37dc1fc2d2f0",
 		"microserviceExamples": [
-			{"{ms_0}": "afe2c331-8fdb-4e34-8e85-7060688be822"},
-			{"{ms_1}": "eaf4449b-18a7-4706-9c5a-942a3859fbab"},
-			{"{ms_2}": "2c84e83e-3fca-45a3-8aad-ff35495bc06c"}
+			{"{ms_0}": "ebfcfd29-81aa-41b3-9256-127bdc07bb31"},
+			{"{ms_1}": "01372fd4-552a-427d-881d-4b2fd892bf03"},
+			{"{ms_2}": "621ead7e-2acb-4322-b811-a1f1c60f3c86"}
 		],
+		"screenshotDimensionX": 768,
+		"screenshotDimensionY": 430,
 		"tabs": [{
 				"dashboardTab": {
 					"title": "Transfer Tab",
